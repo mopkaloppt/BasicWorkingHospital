@@ -33,7 +33,7 @@ public class GPlanner
         List<Node> leaves = new List<Node>();
         Node start = new Node(null, 0, GWorld.Instance.GetWorld().GetStates(), null);
 
-        bool success = BuildGraph(start, leaves, useableActions, goal);
+        bool success = BuildGraph(start, leaves, usableActions, goal);
 
         if (!success)
         {
@@ -115,7 +115,7 @@ public class GPlanner
         return foundPath;
     }
 
-    private bool GoalAchieved(Dictionary<string, int> goal, Dictionary<string, int> state)
+    private bool GoalAchieved(Dictionary<string, int> goals, Dictionary<string, int> state)
     {
         foreach (KeyValuePair<string, int> g in goals)
         {
