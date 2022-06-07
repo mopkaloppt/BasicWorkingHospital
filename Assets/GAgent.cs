@@ -26,7 +26,7 @@ public class GAgent : MonoBehaviour
     SubGoal currentGoal;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         GAction[] acts = this.GetComponents<GAction>();
         foreach (GAction a in acts)
